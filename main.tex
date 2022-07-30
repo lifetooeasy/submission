@@ -1,0 +1,159 @@
+
+\documentclass[a4paper,fleqn]{cas-sc}
+
+\usepackage[authoryear,longnamesfirst]{natbib}
+
+
+%%%Author macros
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+%%%
+
+\input{./newcommands}
+\usepackage{graphicx} 
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+% Short title
+\shorttitle{Cloud-based Image Processing}    
+
+% Main title of the paper
+\title [mode = title]{On the Use of Reference Nets for Building Cloud-based Scientific Workflows}  
+
+% Title footnote mark
+% eg: \tnotemark[1]
+%\tnotemark[<tnote number>] 
+
+% Title footnote 1.
+% eg: \tnotetext[1]{Title footnote text}
+%\tnotetext[<tnote number>]{<tnote text>} 
+
+% First author
+%
+% Options: Use if required
+% eg: \author[1,3]{Author Name}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Sir,
+%       orcid=0000-0000-0000-0000,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+
+%\author[1]{Hayat Bendoukha}[]
+
+% Corresponding author indication
+%\cormark[<corr mark no>]
+
+% Footnote of the first author
+%\fnmark[<footnote mark no>]
+
+% Email id of the first author
+%\ead{hayat.bendoukha@univ-usto.dz}
+
+% URL of the first author
+%\ead[url]{<URL>}
+
+% Credit authorship
+% eg: \credit{Conceptualization of this study, Methodology, Software}
+%\credit{<Credit authorship details>}
+
+% Address/affiliation
+%\affiliation[1]{organization={Département d'Informatique, Faculté des Mathématiques et Informatique, Université des Sciences et de la Technologie d'Oran %Mohamed  Boudiaf},
+%            addressline={BP 1505, El Mnaouer}, 
+%            city={Oran},
+%          citysep={}, % Uncomment if no comma needed between city and postcode
+%            postcode={31000}, 
+%            state={},
+%            country={Algeria}}
+
+% Corresponding author text
+%\cortext[1]{Corresponding author}
+
+% Footnote text
+%\fntext[1]{}
+
+% For a title note without a number/mark
+%\nonumnote{}
+
+
+% Here goes the abstract
+\begin{abstract}
+Cloud computing provides scientists with a large number of powerful resources.
+%
+These resources enhance the productivity of the whole system.
+%
+Running complex scientific workflows on Cloud resources rather then on-premise increases the performance of execution.
+%
+Nevertheless, traditional scientific workflow management systems (SWfM) are not yet adapted for the Cloud.
+%
+Creating scientific workflows and executing them in the Cloud still face many challenges due to the complexity of the Cloud environment. 
+%
+Besides, migrating a part or the whole scientific application to the Cloud is not trivial.
+%
+It should be based on a solid strategy.
+%
+Issues like: Where to store the data and where to execute the processes need to be investigated.
+%
+In this paper, we first present \RenewGrass{}, a tool for modeling and executing image processing workflows by \emph{reference nets}.
+%
+Then, we discuss the deployment of \RenewGrass{} into the Cloud.
+%
+This work includes also a use case example related to the remote sensing domain.
+%
+
+\end{abstract}
+
+
+% Keywords
+% Each keyword is seperated by \sep
+\begin{keywords}
+Workflows \sep RenewGrass \sep Petri Nets \sep Cloud computing \sep Image processing 
+\end{keywords}
+
+\maketitle
+
+\section{Introduction}
+\input{introduction}
+
+\section{Related Work and Background}
+\input{functionality}
+
+\section{\RenewGrass{}}
+\input{grassintegration}
+
+\section{\RenewGrass{} in the Cloud}
+\input{cloudmigration}
+
+\section{Discussion}
+\input{discussion}
+
+\section{Conclusion}
+\input{conclusion}
+
+
+
+%% Loading bibliography style file
+\bibliographystyle{cas-model2-names}
+
+% Loading bibliography database
+\bibliography{main}
+
+% Biography
+\bio{}
+% Here goes the biography details.
+\endbio
+
+%\bio{pic1}
+% Here goes the biography details.
+\endbio
+
+\end{document}
+
+

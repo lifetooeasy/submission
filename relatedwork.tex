@@ -1,0 +1,89 @@
+\label{sec:relatedwork}
+%
+A model is a simplified representation of a phenomenon or a system.
+%
+Models in the remote sensing domain are important to analyze and to understand the behavior of the whole processing steps.
+%
+There are different kind of models, the complete classification.
+%
+Their presentation and explanation are out of scope of this paper.
+%
+We only notice that the models are classified by purpose, methodology and logic.
+%
+In this work we focus on \textit{Process Models}, which integrate existing knowledge into a set of relationships and equations for quantifying the physical process.
+%
+These models are typically raster-based.
+%
+Most of GIS (commercial or open source) provide tools and assist scientists creating their models created by dragging and dropping tools. 
+%
+In most of established GIS softwares, the tool is named \textit{ModelBuilder}.
+%
+A ModelBuilder is a graphical user interface that helps creating models. 
+%
+In ModelBuilder, a process is composed of input data, the tool to apply to the data and the resulting output data. 
+%
+Famous existing ModelBuilders are the ArcGIS (\cite{Armstrong09}) and the \textsc{Grass} ModelBuilder\footnote{\url{http://grasswiki.osgeo.org/wiki/WxGUI_Graphical_Modeler}}.
+%
+In ArcGIS, the model is represented by a flux diagram in a graphic user interface that facilitates to create, visualize, edit, and execute geoprocessing workflows, to use and reuse them, to share and apply them to different geographic areas.
+%
+In the other side, \textsc{Grass} GIS provides also commands for preparing input variables, running and viewing the model.    
+%
+
+The novelty of this work is that we use Petri nets as modeling techniques in contrast to the tools mentioned above.
+%
+Petri nets provide both graphical notation and a precise mathematical notions.
+%
+The first feature offers a clear way to specify complex systems, while the second feature permits to analyze the created model.
+%
+We mean by analysis, the possibility to verify certain properties of Peri nets models such as the \emph{reachability} of certain markings, \emph{boundedness} of places, \emph{liveness} and deadlock-freedom.
+
+%
+Concerning this issue, \Renew{} already provides several plug-ins that help to analyze the modeled workflows.
+%
+For example in \cite{Hewelt+11}, the authors investigate the integration of an external verification tool called LoLA (Low Level Net Analyser, \cite{Karsten+00}).
+%
+LoLa is a verification tool for place/transition and colored nets.
+%
+In \cite{Cabac+11}, the authors introduce net components that are designed to test the behavior of Petri nets under development.
+%
+In a second step, the execution of these test components is automated and integrated into the unit testing framework JUnit. 
+%
+
+\section{\RenewGrass{} in \Renew{}}
+\label{sec:renewgrassinrenew}
+%
+Although \RenewGrass{} does not require an additional graphical user interface for the modeling and the simulation of workflows, we have implemented front-end functionalities.
+%
+An entry is added for \RenewGrass{} in the menu. 
+%
+Users have the possibility to open predefined image processing models or to activate the Grass Net Components (see Section~\ref{sec:grassnetcomponents}). 
+%For instance, Fig. \ref{fig:netcomp} shows the Grass Nets Components, which can be selected from the \Renew{} palette.
+%
+Furthermore, to use the Grass Net Components, a new palette is added to the GUI of \Renew{} (see Fig.~\ref{fig:netcomp}).  
+%
+\begin{figure}[!t]
+    \centering
+  \includegraphics[width=0.45\textwidth]{renewgrassnets}
+\caption{The Grass Net Components}
+\label{fig:netcomp}
+\end{figure} 
+
+%In order to be integrated into \Renew{}, \RenewGrass{} is written in Java.
+%
+%The Grass GIS modules (see section \ref{sec:grassintegration}) can be directly invoked from the Petri nets transitions. 
+%
+
+%
+%The integration of \RenewGrass{} in \Renew{} offers many advantages:
+%
+
+\begin{figure}[!t]
+    \centering
+  \includegraphics[width=0.45\textwidth,height=0.10\textheight]{screenshotMenu}
+\caption{\RenewGrass{} in \Renew{} Menu}
+\label{fig:grassmenu}
+\end{figure}
+
+
+
+

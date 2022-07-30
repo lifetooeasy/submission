@@ -1,0 +1,87 @@
+%!TEX root = ./FMi_2015_AISC.tex
+%
+% UTF8-Check: Umlaute: äöüÄÖÜß
+%
+\label{sec:introduction}
+%
+\emph{Scientific workflows} are a special class of workflows, which are characterized as large-scale, long-running and resource-intensive  \cite{scientific}. 
+%Different domains can benefit from the Cloud. 
+%
+The major goal of scientific workflows is to allow scientists to focus on domain-specific (science) aspects of their work, rather than dealing with complex data management and software issues \cite{scientific20}. 
+%In the current work, we focus on \emph{scientific workflows}, which are characterized as large-scale and long-running.
+%
+How the sequence of the workflow tasks is represented can be handled in different ways.
+%
+The sequence can be specified either by scripting languages or through graph-based techniques such as Petri nets or $ \pi $-calculus \cite{Aalst03picalculus} \cite{smith04pi}.
+%
+Scripting languages are usually based on markup languages such as
+Extensible Markup Language (XML). They may be convenient for well skilled users and do not need to be converted to be run on a cloud environment. But, they are not user-oriented and do not permit to  specify large and complex workflows manually \cite{hayatndt}. 
+%
+In this work, Petri nets \cite{petri21} and more specifically \textit{reference nets} \cite{Kummer02} are presented as a modeling technique suitable to model the workflow patterns
+in an elegant and easy way \cite{sofiane}.
+
+Nevertheless, due to the large amount of data and tasks, that need to be processed, the execution of such kind of workflows requires often to be mapped into external resources.
+%
+During last few years, Cloud computing is growing considerably and it is gaining popularity in both academia and industry.
+%
+We believe that Clouds are the suitable environement for the execution of scientific workflows thanks to the powerful resources, which range from storage, computing and networks that clouds provide.
+%
+Unfortunately, existing Workflow Management Systems are not adapted to perform in the Cloud.
+%
+They need to fit to the Cloud architecture.
+%
+They also need to provide modeling means and migration mechanisms that enable a full integration between workflow concepts and Cloud technology.
+
+
+The objective of the current work is twofold.
+%
+First, we implemented a tool named \RenewGrass{} for the specification and the execution of scientific workflows.
+%
+Then, we, successfully, integrated \RenewGrass{} in the \textbf{RE}ference \textbf{NE}ts \textbf{W}orkshop (\Renew{}) which is available at (\url{www.renew.de}), our chosen modeling and simulation tool for Petri nets.
+%
+%\RenewGrass{} has been successfully integrated in the \textbf{RE}ference \textbf{NE}ts \textbf{W}orkshop (\Renew{}) which is available at (\url{www.renew.de}), our chosen modeling and simulation tool for Petri nets.
+%
+As a domain of application, the tool is suitable for remote sensing especially processing of satellite imagery.
+%
+% \cite{Diverse Papiere zu RenewGrass!}
+%
+Modeling and implementing such kind of workflows need specific tools and techniques, which are unfortunately not provided by \Renew{}.
+%
+Technically, the integration of \RenewGrass{} consists on extending  \Renew{} by modules and components of the Geographic Resource Analysis Support System (\textsc{Grass}) GIS (Geographic Information System).
+%Technically, the Geographic Resource Analysis Support System (\textsc{Grass}) GIS (Geographic Information System) modules \cite{GRASS_GIS_software} have been successfully integrated with \Renew{}. 
+%
+This allows users to invoke Grass GIS modules directly from their Petri net models, which can be later executed.
+%
+With the integration of \RenewGrass{} into \Renew{}, the latter is now able to deal with other research domains such as the scientific domain.
+%
+Moreover, as soon as the workflow requirements become locally unsatisfied, workflow tasks need to be mapped to distributed resources.
+%
+%With respect to the work presented in \cite{Bendoukha+15c} and as an extension, this issue is also taken into account, since our long-term perspective is to provide a service-oriented environment built on top of Cloud resources and to allow flexible deployment of scientific workflows.
+%
+Therefore, we will discuss the deployment of \RenewGrass{} into the Cloud.
+%
+Questions like: Where to store the data? Where to execute the activities? will be investigated.
+%
+Here, we propose an agent-based architecture, where each functionality of the system is performed by a specific agent.
+%
+In our approach, we follow the \Paosel{} (\Paose{}) paradigm for developing agent-based applications.
+%
+
+%%Remainder of the paper
+The rest of the paper is organized as follows. 
+%
+Related work as well as the conceptual and technical background of this work are presented in Section.~\ref{sec:functionality}.
+%
+\RenewGrass{} is described in Section.~\ref{sec:grassintegration}. 
+%
+How \RenewGrass{} can be deployed in the Cloud is investigated in Section.~\ref{sec:Cloudmigration}.
+%
+%The drawbacks of the current implementations and propose further solutions are discussed in Section.~\ref{sec:discussion}.
+Section.~\ref{sec:discussion} discusses further solutions.
+%
+Section.~\ref{sec:conclusion} concludes the paper with summary and future works.
+
+
+
+
+
